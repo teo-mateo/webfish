@@ -44,6 +44,8 @@ func main(){
 
 		container := ""
 
+		fmt.Println("ceplm")
+
 		switch payload.Repository.FullName {
 			case "teo-mateo/flbrowser":
 				fmt.Println("Adding timestamp for FLBROWSER repo")
