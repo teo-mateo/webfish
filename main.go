@@ -9,6 +9,7 @@ import (
 	"os"
 	"encoding/json"
 	"time"
+	"github.com/davecgh/go-spew/spew"
 )
 
 func main(){
@@ -44,7 +45,7 @@ func main(){
 
 		container := ""
 
-		fmt.Println("ceplm")
+		spew.Dump(payload)
 
 		switch payload.Repository.FullName {
 			case "teo-mateo/flbrowser":
