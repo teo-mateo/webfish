@@ -63,12 +63,10 @@ func main(){
 		}
 	})
 
-
 	var host = "0.0.0.0:"+strconv.Itoa(port)
 	fmt.Println("Listening at " + host)
 	fmt.Println("Shared (command) file: " + file)
 	http.ListenAndServe(host, nil)
-
 }
 
 func appendContainerToFile(file string, repo string) error {
