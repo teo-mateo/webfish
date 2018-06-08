@@ -53,6 +53,7 @@ func main(){
 				container = "rtorrent"
 			case "teo-mateo/webfish":
 				fmt.Println("Adding timestamp for WEBFISH repo")
+				fmt.Println("Now you see this too")
 				container = "webfish"
 			default:
 				fmt.Println("Unknown repo: " + payload.Repository.FullName)
