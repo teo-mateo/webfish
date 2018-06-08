@@ -29,7 +29,7 @@ func main(){
 
 		w.Write([]byte("Yes webfish"))
 	})
-	var host = "localhost:"+strconv.Itoa(port)
+	var host = "0.0.0.0:"+strconv.Itoa(port)
 	fmt.Println("Listening at " + host)
 
 	http.ListenAndServe(host, nil)
