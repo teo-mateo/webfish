@@ -6,7 +6,6 @@ import (
 	"flag"
 	"strconv"
 	"io/ioutil"
-	"github.com/davecgh/go-spew/spew"
 	"os"
 	"encoding/json"
 	"time"
@@ -29,19 +28,18 @@ func main(){
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
 
 		defer r.Body.Close()
-		spew.Dump(r.Header)
 
 		body, err := ioutil.ReadAll(r.Body)
-		if err == nil{
-			fmt.Println("BODY:")
-			fmt.Println(string(body))
+		if err != nil{
+			fmt.Println(err)
+			return
 		}
 
 		payload := &GitHubPayload{}
 		err = json.Unmarshal(body, payload)
-
 		if err != nil{
 			fmt.Println(err)
+			return
 		}
 
 		container := ""
@@ -58,7 +56,6 @@ func main(){
 			err = appendContainerToFile(file, container)
 			if err != nil{
 				fmt.Println(err)
-				os.Exit(1)
 			}
 		}
 	})
