@@ -49,10 +49,10 @@ func main(){
 
 		switch payload.Repository.FullName {
 			case "teo-mateo/flbrowser":
-				fmt.Println("Adding timestamp for FLBROWSER repo")
+				fmt.Println("Adding timestamp for FLBROWSER repo.")
 				container = "rtorrent"
 			case "teo-mateo/webfish":
-				fmt.Println("Adding timestamp for WEBFISH repo")
+				fmt.Println("Adding timestamp for WEBFISH repo.")
 				container = "webfish"
 			default:
 				fmt.Println("Unknown repo: " + payload.Repository.FullName)
