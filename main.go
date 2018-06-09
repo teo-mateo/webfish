@@ -22,7 +22,7 @@ func main(){
 	flag.Parse()
 
 	if file == ""{
-		fmt.Println("missing arg: file")
+		fmt.Println("Missing arg: file")
 		os.Exit(1)
 	}
 
