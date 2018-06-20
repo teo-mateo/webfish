@@ -55,7 +55,7 @@ func main(){
 				fmt.Println("Adding timestamp for WEBFISH repo.")
 				container = "webfish"
 			case "teo-mateo/flbrowser-client":
-				fmt.Println("Adding timestamp for WEBFISH repo.")
+				fmt.Println("Adding timestamp for FLBROWSER-CLIENT repo.")
 				container = "flbrowser-client"
 			default:
 				fmt.Println("Unknown repo: " + payload.Repository.FullName)
